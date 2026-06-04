@@ -119,18 +119,6 @@ Build-LLM-From-Scratch/
 │   └── cheatsheets/
 │
 ├── notebooks/
-│   ├── 01_tokenization.ipynb
-│   ├── 02_embeddings.ipynb
-│   ├── 03_attention.ipynb
-│   ├── 04_multihead_attention.ipynb
-│   ├── 05_transformer_block.ipynb
-│   ├── 06_gpt_architecture.ipynb
-│   ├── 07_pretraining.ipynb
-│   ├── 08_training_loop.ipynb
-│   ├── 09_evaluation.ipynb
-│   ├── 10_load_pretrained_weights.ipynb
-│   ├── 11_classifier_finetuning.ipynb
-│   └── 12_instruction_finetuning.ipynb
 │
 ├── src/
 │
