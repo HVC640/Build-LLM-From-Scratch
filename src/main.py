@@ -1,5 +1,6 @@
 
 import torch
+import tiktoken
 
 from attention.causal_attention import CausalAttention
 from attention.self_attention import SelfAttention_v1, SelfAttention_v2
@@ -9,6 +10,37 @@ from tokenizer.dataset import create_dataloader_v1
 
 from embeddings.token_embedding import TokenEmbedding
 from embeddings.positional_embedding import PositionalEmbedding
+
+
+def test_tiktoken():
+    # Get the encoding for the model
+    encoding = tiktoken.encoding_for_model("gpt-2")
+
+    # Encode a string into tokens
+    tokens = encoding.encode("Hello, world!")
+    print(tokens)  # Returns a list of token integers
+    token_texts = [encoding.decode([token]) for token in tokens]
+    print(token_texts)  # Returns the text representation of each token
+
+    # Decode tokens back into text
+    text = encoding.decode(tokens)
+    print(text)  # Returns "Hello, world!"
+
+    # Get the exact token count
+    token_count = len(tokens)
+    print(f"Token count: {token_count}")
+
+    tokens = encoding.encode(
+        'def check_odd_even(num: int) -> str:    return "Even" if num % 2 == 0 else "Odd"')
+    print(tokens)  # Returns a list of token integers
+    token_texts = [encoding.decode([token]) for token in tokens]
+    print(token_texts)  # Returns the text representation of each token
+
+    text = encoding.decode(tokens)
+    print(text)  # Returns "The quick brown fox jumps over the lazy dog."
+
+    token_count = len(tokens)
+    print(f"Token count: {token_count}")
 
 
 def test_tokenizer_and_dataloader():
@@ -106,4 +138,5 @@ def test_attention_modules():
 
 
 if __name__ == "__main__":
-    test_attention_modules()
+    # test_attention_modules()
+    test_tiktoken()
