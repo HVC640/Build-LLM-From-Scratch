@@ -193,14 +193,14 @@ A project focused on:
 ## Current Progress
 
 * [x] Data Preparation & Sampling
-* [ ] Embeddings
-* [ ] Attention Mechanism
-* [ ] Transformer Architecture
-* [ ] Pretraining
-* [ ] Training Loop
-* [ ] Evaluation
-* [ ] Loading Pretrained Weights
-* [ ] Finetuning
+* [x] Embeddings
+* [x] Attention Mechanism
+* [x] Transformer Architecture
+* [x] Pretraining
+* [x] Training Loop
+* [x] Evaluation
+* [x] Loading Pretrained Weights
+* [x] Finetuning
 
 ---
 
